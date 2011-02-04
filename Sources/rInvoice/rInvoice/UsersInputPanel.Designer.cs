@@ -262,6 +262,7 @@
             this.Controls.Add(this.addOrEditUserTableLayoutPanel);
             this.Name = "UsersInputPanel";
             this.Text = "Enter Data";
+            this.Load += new System.EventHandler(this.UsersInputPanel_Load);
             this.addOrEditUserTableLayoutPanel.ResumeLayout(false);
             this.addOrEditUserTableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);

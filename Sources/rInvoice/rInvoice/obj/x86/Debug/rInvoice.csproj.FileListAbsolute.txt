@@ -1,0 +1,17 @@
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\bin\Debug\rInvoice.exe.config
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\bin\Debug\DBFirma.sdf
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\bin\Debug\rInvoice.exe
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\bin\Debug\rInvoice.pdb
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.Classifiers.resources
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.ClassifiersGrupInputPanel.resources
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.ClassifiersInputPanel.resources
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.LoghinForm.resources
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.MainForm.resources
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.Properties.Resources.resources
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.UsersAdministration.resources
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.UsersInputPanel.resources
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.exe
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.pdb

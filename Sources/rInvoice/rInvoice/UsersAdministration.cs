@@ -42,5 +42,11 @@ namespace rInvoice
             DataTable gvTable = mServerObject.SelectUsers(false);
             dataGridView1.DataSource = gvTable;
         }
+
+        private void newButton_Click(object sender, EventArgs e)
+        {
+            UsersInputPanel usrp = new UsersInputPanel();
+            usrp.ShowDialog();
+        }
     }
 }
