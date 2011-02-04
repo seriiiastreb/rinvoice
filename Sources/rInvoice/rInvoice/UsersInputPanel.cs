@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using rInvoice.Utils;
 
 namespace rInvoice
 {
@@ -76,7 +77,7 @@ namespace rInvoice
             firstNameTextBox.Text = mFirstName;
             lastNameTextBox.Text = mLastName;
             
-            rolesComboBox.SelectedValue = mRole;
+            //rolesComboBox.SelectedValue = mRole;
 
             passwordTextBox.Text = mPassword;
             passwordConfirmTextBox.Text = mPassword;
@@ -87,7 +88,12 @@ namespace rInvoice
         }
 
         private void fillRoleComboBox()
-        { 
+        {
+            DataTable gr1 = mServerObject.GetClassifiersListByTypeID(UFT.Table_TypeID.NAME_RoleType);
+            rolesComboBox.DataSource = gr1;
+            rolesComboBox.SelectedIndex = -1;
+            rolesComboBox.DisplayMember = "Name";
+            rolesComboBox.ValueMember = "Code";
         }
     }
 }

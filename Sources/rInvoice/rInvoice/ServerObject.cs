@@ -3,16 +3,83 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using rInvoice.Utils;
 
 namespace rInvoice
 {
     class ServerObject
     {
         DataBridge mDataBridge = null;
+        private DataTable mTableNames;
+        private DataTable mTableFieldNames;
 
         public ServerObject()
         {
             mDataBridge = new DataBridge();
+
+            string commandTableList = @"SELECT " + UFT.Table_TableList.COLUMN_TableID
+                                            + ", " + UFT.Table_TableList.COLUMN_TableNameDB
+                                            + " FROM " + UFT.Table_TableList.TABLE_NAME;
+
+            string commandFieldList = @"SELECT " + UFT.Table_FieldsList.COLUMN_FieldID
+                                            + ", " + UFT.Table_FieldsList.COLUMN_FieldNameDB
+                                            + " FROM " + UFT.Table_FieldsList.TABLE_NAME;
+
+            if (mDataBridge.Connect() == true)
+            {
+                mTableNames = mDataBridge.ExecuteQuery(commandTableList);
+                //mLastError = mDataBridge.LastError;
+
+                mTableFieldNames = mDataBridge.ExecuteQuery(commandFieldList);
+                //mLastError = mDataBridge.LastError;
+                mDataBridge.Disconnect();
+            }
+            //else
+            //{
+            //    throw new Exception("HRPM server application failed to connect to DB. " + mLastError);
+            //}
+
+        }
+
+
+       private string GetTableName(int tableID)
+        {
+            string tableName = string.Empty;
+            if (mTableNames != null && mTableNames.Rows.Count > 0)
+            {
+                string expression = UFT.Table_TableList.COLUMN_TableID + " = " + tableID;
+                DataRow[] selectedRows = mTableNames.Select(expression);
+                if (selectedRows != null && selectedRows.Length == 1)
+                {
+                    tableName = (string)selectedRows[0].ItemArray[1];
+                }
+                else
+                {
+                    throw new Exception("Multiple values for one table name code!");
+                }
+
+            }
+            return tableName;
+        }
+
+        private string GetColumnName(int columnID)
+        {
+            string columnName = string.Empty;
+            if (mTableFieldNames != null && mTableFieldNames.Rows.Count > 0)
+            {
+                string expression = UFT.Table_FieldsList.COLUMN_FieldID + " = " + columnID;
+                DataRow[] selectedRows = mTableFieldNames.Select(expression);
+                if (selectedRows != null && selectedRows.Length == 1)
+                {
+                    columnName = (string)selectedRows[0].ItemArray[1];
+                }
+                else
+                {
+                    throw new Exception("Multiple values for one table name code!");
+                }
+
+            }
+            return columnName;
         }
 
         public bool AutentificateUser(string username, string password)
@@ -221,6 +288,34 @@ namespace rInvoice
             }
 
             return result;
+        }
+
+        public DataTable GetClassifiersListByTypeID(int typeID)
+        {
+            DataTable classifierTypesByIDList = new DataTable();
+
+            try
+            {
+                if (mDataBridge.Connect() == true)
+                {
+
+                    string commandText = @"SELECT Classifiers.[" + GetColumnName(UFT.Table_Classifiers.COLUMN_Code) + "] "
+                                         + ", Classifiers.[" + GetColumnName(UFT.Table_Classifiers.COLUMN_Name) + "] "
+                                         + ", Classifiers.[" + GetColumnName(UFT.Table_Classifiers.COLUMN_Description) + "] "
+                                         + " FROM " + GetTableName(UFT.Table_Classifiers.TABLE_NAME) + " as Classifiers "
+                                        + " WHERE Classifiers.[" + GetColumnName(UFT.Table_Classifiers.COLUMN_TypeID) + "] = " + typeID + " "
+                                        + "OR Classifiers.[" + GetColumnName(UFT.Table_Classifiers.COLUMN_Code) + "] = 0 ";
+                    commandText += " ORDER BY Classifiers.[" + GetColumnName(UFT.Table_Classifiers.COLUMN_Name) + "] asc ";
+                    classifierTypesByIDList = mDataBridge.ExecuteQuery(commandText);
+                   // mLastError = mDataBridge.LastError;
+                }
+            }
+            finally
+            {
+                mDataBridge.Disconnect();
+            }
+
+            return classifierTypesByIDList;
         }
 
     }
