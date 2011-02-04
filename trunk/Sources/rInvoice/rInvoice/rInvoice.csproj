@@ -8,8 +8,8 @@
     <ProjectGuid>{5535302C-DCB5-4DFC-9A20-E17EB1DBF495}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ManCas</RootNamespace>
-    <AssemblyName>ManCas</AssemblyName>
+    <RootNamespace>rInvoice</RootNamespace>
+    <AssemblyName>rInvoice</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
@@ -130,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UsersAdministration.resx">
       <DependentUpon>UsersAdministration.cs</DependentUpon>
