@@ -55,10 +55,10 @@
             // 
             // closeButton
             // 
-            this.closeButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.closeButton.Location = new System.Drawing.Point(567, 377);
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.Location = new System.Drawing.Point(709, 377);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(54, 26);
+            this.closeButton.Size = new System.Drawing.Size(80, 26);
             this.closeButton.TabIndex = 3;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
@@ -79,12 +79,13 @@
             // newButton
             // 
             this.newButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.newButton.Location = new System.Drawing.Point(160, 377);
+            this.newButton.Location = new System.Drawing.Point(158, 377);
             this.newButton.Name = "newButton";
-            this.newButton.Size = new System.Drawing.Size(75, 23);
+            this.newButton.Size = new System.Drawing.Size(80, 26);
             this.newButton.TabIndex = 5;
             this.newButton.Text = "New";
             this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // UsersAdministration
             // 
