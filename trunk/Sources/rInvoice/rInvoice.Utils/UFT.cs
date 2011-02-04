@@ -25,5 +25,19 @@ namespace rInvoice.Utils
             public static readonly string COLUMN_ClassifierType = "ClassifierType";
         }
 
+        public class Table_Classifiers
+        {
+            public static readonly int TABLE_NAME = 1;
+            public static readonly int COLUMN_TypeID = 1;
+            public static readonly int COLUMN_Code = 2;
+            public static readonly int COLUMN_Name = 3;
+            public static readonly int COLUMN_Description = 4;
+        }
+
+        public class Table_TypeID
+        {
+            public static readonly int NAME_RoleType = 3;
+        }
+
     }
 }
