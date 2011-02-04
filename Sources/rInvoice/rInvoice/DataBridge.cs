@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlServerCe;
 using System.Configuration;
 
-namespace ManCas
+namespace rInvoice
 {
     class DataBridge
     {
