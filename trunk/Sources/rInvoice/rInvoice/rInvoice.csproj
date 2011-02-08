@@ -79,6 +79,12 @@
     <Compile Include="ClassifiersInputPanel.Designer.cs">
       <DependentUpon>ClassifiersInputPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Constante.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Constante.Designer.cs">
+      <DependentUpon>Constante.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBridge.cs" />
     <Compile Include="LoghinForm.cs">
       <SubType>Form</SubType>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClassifiersInputPanel.resx">
       <DependentUpon>ClassifiersInputPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Constante.resx">
+      <DependentUpon>Constante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoghinForm.resx">
       <DependentUpon>LoghinForm.cs</DependentUpon>
