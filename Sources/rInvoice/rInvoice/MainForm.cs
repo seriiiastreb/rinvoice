@@ -61,5 +61,12 @@ namespace rInvoice
         {
             this.Close();
         }
+
+        private void constanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Constante constpanel = new Constante();
+            constpanel.Name = "Constante";
+            AddUserControlInTabs((UserControl)constpanel);
+        }
     }
 }

@@ -17,3 +17,4 @@ E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.exe
 E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.pdb
 E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\bin\Debug\rInvoice.Utils.dll
 E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\bin\Debug\rInvoice.Utils.pdb
+E:\SVNRootRInvoice\Sources\rInvoice\rInvoice\obj\x86\Debug\rInvoice.Constante.resources
